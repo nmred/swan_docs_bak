@@ -263,6 +263,19 @@ SHELL:
 	./configure --with-php-config=$INSTALL_PHP/bin/php-config \
 	make -j $CPU_NUM && make install
 
+- redis
+
+ - 加入时间: 2013-08-26
+ - 更新时间: 2013-08-26
+ - [下载地址][redis-download]
+ - 编译方法: 
+
+SHELL:
+
+	$INSTALL_PHP/bin/phpize
+	./configure --with-php-config=$INSTALL_PHP/bin/php-config \
+	make -j $CPU_NUM && make install
+
 - xdebug
 
  - 加入时间: 2013-08-26
