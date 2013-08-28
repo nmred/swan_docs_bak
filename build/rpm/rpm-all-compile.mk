@@ -10,11 +10,11 @@
   
 - 集成软件说明：
   
-   1.PHP (V5.4.13)
+   1.PHP (V5.5.3)
 
    - 加入时间: 2013-03-28
    - 更新时间: 2013-03-28
-   - [编译概述][php-compile]: 编译 GD 库时可能有问题，需要替换 gd_io.h ,以后版本可能不用 
+   - [编译概述][php-compile] 
    - [下载地址][php-download]
  
    2.MYSQL (V5.6.0)
@@ -24,7 +24,7 @@
    - [编译概述][mysql-compile]: 下载的是二进制 tar 包无需编译, 载后安装到目标目录后删除 mysql-test、lib/plugin/libdaemon_example* 防止不必要的依赖
    - [下载地址][mysql-download]
   
-   3.REDIS (V2.6.12)
+   3.REDIS (V2.8)
 
    - 加入时间: 2013-03-30 
    - 更新时间: 2013-03-30 

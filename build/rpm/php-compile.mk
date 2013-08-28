@@ -80,7 +80,6 @@ SHELL:
 	  --with-png=$INSTALL_LIBPNG \
 	  --with-zlib=$INSTALL_ZLIB \
 	  --with-freetype=$INSTALL_FREETYPE \
-	  --enable-m4_pattern_allow \ 
 	make -j $CPU_NUM && make install
 
 - libxml2
@@ -289,7 +288,7 @@ SHELL:
 	./configure --with-php-config=$INSTALL_PHP/bin/php-config \
 	make -j $CPU_NUM && make install
 
-PEAR 安装
+PEAR 安装 (安装好PHP 进行手动安装)
 ---------
 
 - PHPUnit
@@ -327,11 +326,6 @@ SHELL:
 
 	pear config-set auto_discover 1
 	pear install PHP_UML
-
-PHP 扩展安装说明
-----------------
-
-
 
 
 
