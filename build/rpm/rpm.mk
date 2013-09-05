@@ -32,6 +32,8 @@ SWAN 产品线打包 RPM 软件说明
 - build_dev_rpm
   - SWANSOFT_VERSION="0.3.1"
 
+4. 更新 build_rpm.log
+
 #打包的处理过程(自动)
 
 1. 脚本打包前的预处理
