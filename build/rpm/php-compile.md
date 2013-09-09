@@ -160,7 +160,7 @@ SHELL:
 
 - 修正一些bug 错误
  
-	#gd_io.h 在 build_rpm 库中存放
+	# gd_io.h 在 build_rpm 库中存放
 	cp ${OPENSOURCE}gd_io.h $INSTALL_GD/include
 
 - 将静态编译的扩展源码拷贝到 ext 目录
