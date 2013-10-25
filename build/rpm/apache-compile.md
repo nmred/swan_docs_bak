@@ -1,18 +1,18 @@
 APACHE 安装说明
 ---------------
 
-1. 安装pcre的源码到httpd的安装目录
+- **安装pcre的源码到httpd的安装目录**
 
 	./configure --prefix=$INSTALL_PCRE
 	make -j $CPU_NUM
 	make install
 
-2. 导入apr和apr-utli依赖包
+- **导入apr和apr-utli依赖包**
 
 	cp -rf $SRC_APR $INSTALL_APR
 	cp -rf $SRC_APR_UTIL  $INSTALL_APR_UTIL
 
-3. 正式的编译安装 APACHE 软件
+- **正式的编译安装 APACHE 软件**
 
 	./configure \
 		--prefix=$INSTALL_HTTPD  \
@@ -28,3 +28,4 @@ APACHE 安装说明
 		--enable-mem-cache \
 		--with-pcre=$INSTALL_PCRE \
 	make -j $CPU_NUM && make install
+

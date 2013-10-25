@@ -3,75 +3,61 @@ PHP 编译安装说明
 
 ###编译前需要安装编译的软件
 
-- jpeg-6b
-
+- **jpeg-6b**
  - 加入时间: 2013-03-28
  - 更新时间: 2013-03-28
  - 依赖模块：GD库
  - [下载地址][jpeg-download]
- - 编译方法: 需要创建 $INSTALL_JPEG、$INSTALL_JPEG/bin，$INSTALL_JPEG/lib，$INSTALL_JPEG/include，$INSTALL_JPEG/man，$INSTALL_JPEG/man1，$INSTALL_JPEG/man/man1目录在编译前，然后执行
-
-SHELL:
+ - 编译方法: 需要创建 $INSTALL\_JPEG、$INSTALL\_JPEG/bin、$INSTALL\_JPEG\/lib、$INSTALL\_JPEG/include、$INSTALL\_JPEG/man、$INSTALL\_JPEG/man1、$INSTALL\_JPEG/man/man1目录在编译前，然后执行
 
 	./configure --prefix=$INSTALL_JPEG \
 	--enable-shared \
 	--enable-static \
 	make -j $CPU_NUM && make install
 
-- png
-
+- **png**
  - 加入时间: 2013-03-28
  - 更新时间: 2013-03-28
  - 依赖模块：GD库
  - [下载地址][png-download]
  - 编译方法:
 
-SHELL:
-
+	[shell]
 	# 需要把配置 makefile
 	cp scripts/makefile.std makefile
 	./configure --prefix=$INSTALL_LIBPNG 
 	make -j $CPU_NUM && make install
 
-- freetype
-
+- **freetype**
  - 加入时间: 2013-03-28
  - 更新时间: 2013-03-28
  - 依赖模块：GD库
  - [下载地址][freetype-download]
  - 编译方法:
 
-SHELL:
-
 	# 需要建立目录
 	mkdir $INSTALL_FREETYPE
 	./configure --prefix=$INSTALL_FREETYPE 
 	make -j $CPU_NUM && make install
 
-- zlib
-
+- **zlib**
  - 加入时间: 2013-03-28
  - 更新时间: 2013-03-28
  - 依赖模块：GD库
  - [下载地址][zlib-download]
  - 编译方法:
 
-SHELL:
-
 	# 需要建立目录
 	mkdir $INSTALL_ZLIB
 	./configure --prefix=$INSTALL_ZLIB 
 	make -j $CPU_NUM && make install
 
-- gd
-
+- **gd**
  - 加入时间: 2013-03-28
  - 更新时间: 2013-03-28
  - 依赖模块：PHP GD 扩展
  - [下载地址][gd-download]
  - 编译方法:
-
-SHELL:
 
 	# 需要建立目录
 	mkdir $INSTALL_GD
@@ -82,30 +68,24 @@ SHELL:
 	  --with-freetype=$INSTALL_FREETYPE \
 	make -j $CPU_NUM && make install
 
-- libxml2
-
+- **libxml2**
  - 加入时间: 2013-03-28
  - 更新时间: 2013-03-28
  - 依赖模块：PHP XML 扩展
  - [下载地址][libxml2-download]
  - 编译方法:
 
-SHELL:
-
 	# 需要建立目录
 	mkdir $INSTALL_LIBXML
 	./configure --prefix=$INSTALL_LIBXML
 	make -j $CPU_NUM && make install
 
-- libxstl
-
+- **libxstl**
  - 加入时间: 2013-08-25
  - 更新时间: 2013-08-26
  - 依赖模块：PHP XSL 扩展
  - [下载地址][libxstl-download]
  - 编译方法: 必须先编译 [libxml2][libxml2] 因为依赖这个库
-
-SHELL:
 
 	# 需要建立目录
 	mkdir $INSTALL_LIBXSLT
@@ -115,41 +95,32 @@ SHELL:
 		--with-libxml-libs-prefix=$INSTALL_LIBXML/lib
 	make -j $CPU_NUM && make install
 
-- openssl (默认安装到系统中)
-
+- **openssl (默认安装到系统中)**
  - 加入时间: 2013-08-26
  - 更新时间: 2013-08-26
  - 依赖模块：PHP EVENT / OPENSSL 扩展
  - 编译方法: 
 
-SHELL:
-
 	# 默认安装到系统中
 	yum -y install openssl openssl-devel
 
-- libevent
-
+- **libevent**
  - 加入时间: 2013-08-26
  - 更新时间: 2013-08-26
  - 依赖模块：PHP EVENT EIO 扩展
  - [下载地址][libevent-download]
  - 编译方法: 
 
-SHELL:
-
 	# 默认安装到系统中
 	./configure --prefix=$INSTALL_LIBEVENT 
 	make -j $CPU_NUM && make install
 
-- zmq
-
+- **zmq**
  - 加入时间: 2013-08-26
  - 更新时间: 2013-08-26
  - 依赖模块：PHP ZMQ 扩展
  - [下载地址][zmq-download]
  - 编译方法: 需要注意 zmq 的单元测试文件错误  test_connect_delay.cpp , 需要在文件末尾加上空行 
-
-SHELL:
 
 	# 默认安装到系统中
 	cp $FIXED_BUG_DIR/zmq/test_connect_delay.cpp $SRC_ZMQ/tests/test_connect_delay.cpp
@@ -158,13 +129,13 @@ SHELL:
 
 ###PHP编译安装
 
-- 修正一些bug 错误
- 
+- **修正一些bug 错误**
+
 gd_io.h 在 build_rpm 库中存放
 
 	cp ${OPENSOURCE}gd_io.h $INSTALL_GD/include
 
-- 将静态编译的扩展源码拷贝到 ext 目录
+- **将静态编译的扩展源码拷贝到 ext 目录**
 
 pthreads 扩展
 
