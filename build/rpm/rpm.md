@@ -51,32 +51,39 @@ build\_dev\_rpm
 
 删除一些历史打包垃圾文件目录等。
 
-2. 进入dev_swan 仓库生成 Makefile 文件， 做响应的替换处理
+- **进入dev_swan 仓库生成 Makefile 文件， 做响应的替换处理**
+
+
 
 需要执行 ./configure -m build_rpm
 
-将所有代码 make 到 /tmp/dev_swan/tmp_dev_swan_git 
+将所有代码 make 到 /tmp/dev\_swan/tmp\_dev\_swan\_git 
 
-将 /tmp/dev_swan/tmp_dev_swan\_git 代码用 build\_tar 工具替换
+将 /tmp/dev\_swan/tmp\_dev\_swan\_git 代码用 build\_tar 工具替换
 
-替换后的代码存放在 /tmp/dev_swan-版本
+替换后的代码存放在 /tmp/dev\_swan-版本
 
-3. 将 opt 目录拷贝到和 web 目录拷贝到 打包临时目录
+- **将 opt 目录拷贝到和 web 目录拷贝到 打包临时目录**
 
-4. 创建 tar 包
 
-5. 构建打包 RPM 环境
+- **创建 tar 包**
+
+
+- **构建打包 RPM 环境**
+
 
 具体的环境见。
 
-6. 开始执行打包
+- **开始执行打包**
 
 ###打包后的处理
 
 打包后将 rpm 上传到：
 
-- 百度云盘
+- **百度云盘**
 
-- sourceforge
+
+- **sourceforge**
+
 
 #RPM打包参考资料
