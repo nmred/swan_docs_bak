@@ -1,12 +1,13 @@
 SWAN 产品线打包 RPM 软件说明
 ----------------------------
 
-整个产品先目前 RPM 包出包流程基本一样，唯一特殊的是 dev_swan 开发包的流程，因为会依赖自身的一些工具，
-而 swansoft 等出包需要安装最新的 dev_swan 包在对应的打包机器上。
+整个产品先目前 RPM 包出包流程基本一样，唯一特殊的是 dev\_swan 开发包的流程，因为会依赖自身的一些工具，
+而 swansoft 等出包需要安装最新的 dev\_swan 包在对应的打包机器上。
 
 ###打包前的预处理 (手动干预)
 
-1. 编译 OPT 相关内容
+- **编译 OPT 相关内容**
+
 
 如果没有更新开源的软件即不用更新，直接将最新的 opt 拷贝到 /usr/local/dev_swan 即可。
 
@@ -18,25 +19,35 @@ SWAN 产品线打包 RPM 软件说明
 
 如果更新了相关的软件需要相应的更新 dev_swan 库中的配置
 
-2. 更新 dev_swan 仓库
+- **更新 dev_swan 仓库**
+
 
 为了打包的 dev_swan 工具是最新的，另外需要将代码 make 到目标方便打包工具调用，因为打包工具依赖自身的一些工具。
 
-3. 修改打包相关配置
+- **修改打包相关配置**
 
-需要修改 build\_rpm/dev_swan中一下文件：
-- core.php 
-  - define('SWAN_VERSION', '0.3.1'); // 版本号
-  - define('SWANBR_RELEASE', 'realse'); // 软件发行类型
 
-- build_dev_rpm
-  - SWANSOFT_VERSION="0.3.1"
+需要修改 build\_rpm/dev\_swan中一下文件：
 
-4. 更新 build_rpm.log
+core.php 
+
+	[php]
+	define('SWAN_VERSION', '0.3.1'); // 版本号
+	define('SWANBR_RELEASE', 'realse'); // 软件发行类型
+
+
+build\_dev\_rpm
+
+	[shell]
+	SWANSOFT_VERSION="0.3.1"
+
+- **更新 build\_rpm.log**
+
 
 ###打包的处理过程(自动)
 
-1. 脚本打包前的预处理
+- **脚本打包前的预处理**
+
 
 删除一些历史打包垃圾文件目录等。
 
