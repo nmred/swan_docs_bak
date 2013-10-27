@@ -261,41 +261,31 @@ SHELL:
 	./configure --with-php-config=$INSTALL_PHP/bin/php-config \
 	make -j $CPU_NUM && make install
 
-PEAR 安装 (安装好PHP 进行手动安装)
----------
+###PEAR 安装 (安装好PHP 进行手动安装)
 
 - PHPUnit
-
  - 加入时间: 2013-08-26
  - 更新时间: 2013-08-26
  - 配置：php.ini includes='/usr/local/dev_swan/opt/php/lib/php/'
  - 安装方法: 
-
-SHELL:
 
 	pear config-set auto_discover 1
 	pear install pear.phpunit.de/PHPUnit
 	pear install phpunit/DbUnit
 
 - PHP_CodeCoverage
-
  - 加入时间: 2013-08-26
  - 更新时间: 2013-08-26
  - 配置：php.ini includes='/usr/local/dev_swan/opt/php/lib/php/'
  - 安装方法: 
 
-SHELL:
-
 	pear config-set auto_discover 1
 	pear install pear.phpunit.de/PHP_CodeCoverage
 
 - PHP_UML
-
  - 加入时间: 2013-08-26
  - 更新时间: 2013-08-26
  - 安装方法: 
-
-SHELL:
 
 	pear config-set auto_discover 1
 	pear install PHP_UML
