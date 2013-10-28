@@ -131,11 +131,13 @@ PHP 编译安装说明
 
 - **修正一些bug 错误**
 
+
 gd_io.h 在 build_rpm 库中存放
 
 	cp ${OPENSOURCE}gd_io.h $INSTALL_GD/include
 
 - **将静态编译的扩展源码拷贝到 ext 目录**
+
 
 pthreads 扩展
 
@@ -143,7 +145,6 @@ pthreads 扩展
 	cp -r $SRC_PTHREADS $INSTALL_EXT
 
 - 开始生成 Makefile 配置
-
  - with-config-file-path: 配置文件位置
  - enable-maintainer-zts : 线程安全模式
  - enable-pthreads: PHP 多线程开发支持，需要将扩展安装到 ext 目录
@@ -195,13 +196,10 @@ pthreads 扩展
 ###PHP编译安装后的需要安装的扩展
 
 - event
-
  - 加入时间: 2013-08-26
  - 更新时间: 2013-08-26
  - [下载地址][event-download]
  - 编译方法: 
-
-SHELL:
 
 	$INSTALL_PHP/bin/phpize
 	./configure --with-php-config=$INSTALL_PHP/bin/php-config \
@@ -209,13 +207,10 @@ SHELL:
 	make -j $CPU_NUM && make install
 
 - php-zmq
-
  - 加入时间: 2013-08-26
  - 更新时间: 2013-08-26
  - [下载地址][php-zmq-download]
  - 编译方法: 
-
-SHELL:
 
 	$INSTALL_PHP/bin/phpize
 	./configure --with-php-config=$INSTALL_PHP/bin/php-config \
@@ -223,39 +218,30 @@ SHELL:
 	make -j $CPU_NUM && make install
 
 - eio
-
  - 加入时间: 2013-08-26
  - 更新时间: 2013-08-26
  - [下载地址][eio-download]
  - 编译方法: 
-
-SHELL:
 
 	$INSTALL_PHP/bin/phpize
 	./configure --with-php-config=$INSTALL_PHP/bin/php-config \
 	make -j $CPU_NUM && make install
 
 - redis
-
  - 加入时间: 2013-08-26
  - 更新时间: 2013-08-26
  - [下载地址][redis-download]
  - 编译方法: 
-
-SHELL:
 
 	$INSTALL_PHP/bin/phpize
 	./configure --with-php-config=$INSTALL_PHP/bin/php-config \
 	make -j $CPU_NUM && make install
 
 - xdebug
-
  - 加入时间: 2013-08-26
  - 更新时间: 2013-08-26
  - [下载地址][xdebug-download]
  - 编译方法: 
-
-SHELL:
 
 	$INSTALL_PHP/bin/phpize
 	./configure --with-php-config=$INSTALL_PHP/bin/php-config \
