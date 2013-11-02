@@ -52,9 +52,13 @@
 
 - [DEV_SWAN V0.3.1 开发工具包][download_dev_swan_v0.3.1]
 - [DEV_SWAN V0.3.1 开发工具包.md5][download_dev_swan_v0.3.1_md5]
+- [DEV_SWAN V0.3.2 开发工具包][download_dev_swan_v0.3.2]
+- [DEV_SWAN V0.3.2 开发工具包.md5][download_dev_swan_v0.3.2_md5]
 
-[download_dev_swan_v0.3.1]: http://yun.baidu.com/share/link?shareid=1033256779&uk=3758781644
-[download_dev_swan_v0.3.1_md5]: http://yun.baidu.com/share/link?shareid=1034632751&uk=3758781644
+[download_dev_swan_v0.3.1]: http://pan.baidu.com/s/1tbOYk 
+[download_dev_swan_v0.3.1_md5]: http://pan.baidu.com/s/1qZYHd 
+[download_dev_swan_v0.3.2]: http://pan.baidu.com/s/18AUwH 
+[download_dev_swan_v0.3.2_md5]: http://pan.baidu.com/s/1DuCBZ
 [swansoft_url]: https://github.com/nmred/swansoft
 [dev_swan_url]: https://github.com/nmred/dev_swan
 [sf1_url]: https://github.com/nmred/sf1

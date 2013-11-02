@@ -52,6 +52,18 @@ PHP 编译安装说明
 	./configure --prefix=$INSTALL_ZLIB 
 	make -j $CPU_NUM && make install
 
+- **curl**
+ - 加入时间: 2013-11-02
+ - 更新时间: 2013-11-02
+ - 依赖模块：CURL
+ - [下载地址][curl-download]
+ - 编译方法:
+
+	# 需要建立目录
+	mkdir $INSTALL_LIBCURL
+	./configure --prefix=$INSTALL_LIBCURL 
+	make -j $CPU_NUM && make install
+
 - **gd**
  - 加入时间: 2013-03-28
  - 更新时间: 2013-03-28
@@ -132,7 +144,7 @@ PHP 编译安装说明
 - **修正一些bug 错误**
 
 
-gd_io.h 在 build_rpm 库中存放
+gd\_io.h 在 build_rpm 库中存放
 
 	cp ${OPENSOURCE}gd_io.h $INSTALL_GD/include
 
@@ -158,6 +170,7 @@ pthreads 扩展
  - with-libxml-dir: libXML 扩展
  - enable-soap: SOAP 扩展
  - with-gd: GD 库扩展
+ - with-curl: CURL 库扩展
  - with-snmp: SNMP 扩展
  - with-jpeg-dir: GD 库支持类型
  - with-png-dir: GD 库支持类型
@@ -184,6 +197,7 @@ pthreads 扩展
 		--with-snmp=$INSTALL_SNMP \
 		--with-jpeg-dir=$INSTALL_JPEG \
 		--with-zlib-dir=$INSTALL_ZLIB \
+		--with-curl=$INSTALL_LIBCURL \
 		--with-png-dir=$INSTALL_LIBPNG \
 		--with-freetype-dir=$INSTALL_FREETYPE \
 		--enable-mbstring \
@@ -292,3 +306,4 @@ pthreads 扩展
 [php-zmq-download]:https://github.com/mkoppanen/php-zmq
 [eio-download]: http://pecl.php.net/get/eio
 [xdebug-download]: http://xdebug.org/files/xdebug-2.2.3.tgz
+[curl-download]: http://curl.haxx.se/download/
