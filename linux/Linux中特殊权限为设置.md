@@ -1,6 +1,7 @@
 Linux 中特殊权限为设置
 ---------------------
 
+syncssssssssssssssssssss
 ###粘着位
 
 1)粘着位的作用
