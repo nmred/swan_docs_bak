@@ -160,9 +160,13 @@ ssh命令中如果不指定用户名，将使用SSH客户机中当前用户的�
 1)rsync -e ssh -arv /mnt root@192.168.0.1:/mnt
 
 >-v, –verbose      详细模式输出
+>
 >-q, –quiet        精简输出模式 
+>
 >-c, –checksum     强制对文件传输进行校验 
+>
 >-a, –archive      归档模式，并保持所有文件属性 
+>
 >-r, –recursive    对子目录以递归模式处理
 
 2)用rsync进行远程备份时，最好使用公钥认证的ssh方式和crontab来一起完成 
