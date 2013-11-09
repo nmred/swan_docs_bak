@@ -128,7 +128,7 @@ BUG说明：其实这个bug在2012-03-28就有人提出了，但是可能修复b
 
 
 Bug \#61545
-newt_checkbox_tree_add_item() doesn’t accept correct number of arguments
+newt\_checkbox\_tree\_add\_item() doesn’t accept correct number of arguments
 
 [https://bugs.php.net/bug.php?id=61545][bugs_url]
 
